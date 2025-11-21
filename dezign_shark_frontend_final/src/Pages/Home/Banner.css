@@ -1,0 +1,143 @@
+/* Banner Component Styles */
+
+.HeroSectionWrapper {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.ContentWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.Heading {
+  font-weight: 700;
+  line-height: 60px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.OutlineText {
+  color: transparent;
+  -webkit-text-stroke: 3px #fc0000;
+  font-size: 90px;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  line-height: 100px;
+}
+
+.VideoModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.VideoContainer {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.VideoElement {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.CloseButton {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  z-index: 1001;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: 0.3s;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50px;
+  right: 14%;
+}
+@media (max-width: 1200px) {
+  .CloseButton {
+    top: 35%;
+    right: 10px;
+  }
+}
+
+/* Rotating GIF & Play Button */
+.BannerPlayButton {
+  position: absolute;
+  top: 55%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  cursor: pointer;
+}
+
+.BannerArrowText {
+  position: absolute;
+  top: 63%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: moveArrow 2s infinite;
+}
+@keyframes moveArrow {
+  0% { transform: translateY(20px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+.BannerArrowText img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.BannerArrowText .MuiTypography-h6 {
+  font-size: 18px !important;
+  font-weight: 600;
+  color: #fff;
+  text-orientation: upright;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 900px) {
+  .OutlineText {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .OutlineText {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .BannerArrowText img {
+    width: 60px;
+    height: 60px;
+  }
+}
